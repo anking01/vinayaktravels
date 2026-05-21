@@ -1,0 +1,87 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Trip {
+  id         String   @id @default(cuid())
+  title      String
+  emoji      String   @default("🗺️")
+  status     String   @default("UPCOMING")
+  duration   String
+  type       String
+  badge      String
+  departure  String
+  price      String
+  priceNum   Int      @default(0)
+  rating     Float    @default(4.5)
+  reviews    Int      @default(0)
+  image      String
+  groupSize  String   @default("15-45 people")
+  highlights String   @default("[]")
+  included   String   @default("[]")
+  itinerary  String   @default("[]")
+  active     Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Enquiry {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String   @default("")
+  service   String
+  message   String
+  status    String   @default("NEW")
+  createdAt DateTime @default(now())
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  location  String
+  photo     String   @default("")
+  rating    Int      @default(5)
+  text      String
+  trip      String
+  approved  Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model TeamMember {
+  id    String @id @default(cuid())
+  name  String
+  role  String
+  photo String  @default("")
+  bio   String
+  order Int     @default(0)
+}
+
+model HeroSlide {
+  id       String  @id @default(cuid())
+  type     String  @default("image")
+  mediaUrl String
+  title    String  @default("")
+  subtitle String  @default("")
+  order    Int     @default(0)
+  active   Boolean @default(true)
+}
+
+model Service {
+  id     String  @id @default(cuid())
+  icon   String  @default("🚌")
+  title  String
+  desc   String
+  order  Int     @default(0)
+  active Boolean @default(true)
+}
+
+model SiteSetting {
+  key   String @id
+  value String @default("")
+}

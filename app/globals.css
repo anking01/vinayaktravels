@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* === NEW COLOR SCHEME: Deep Navy + Gold + Beige === */
+  --color-navy: #1a2744;
+  --color-navy-light: #2d4470;
+  --color-navy-dark: #0f1a2e;
+  --color-gold: #C9A84C;
+  --color-gold-dark: #A8893E;
+  --color-gold-light: #E8C96A;
+  --color-beige: #F5EDD8;
+  --color-beige-dark: #E8D5B0;
+  --color-beige-light: #FAF7F0;
+  /* keep old vars for compat */
+  --color-brand-blue: #1a2744;
+  --color-brand-gold: #C9A84C;
+  --font-heading: var(--font-poppins), 'Poppins', sans-serif;
+  --font-body: var(--font-inter), 'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: #1a1a1a;
+  background: #fff;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+.card-hover {
+  transition: all 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26,39,68,0.15);
+}
+
+.scroll-hide::-webkit-scrollbar { display: none; }
+.scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
