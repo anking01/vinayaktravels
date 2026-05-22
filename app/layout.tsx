@@ -18,6 +18,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  verification: {
+    google: "tEzS2WwuiT7wBrJd_RlfnY7cCb3QKHV2DcNCF-gtJ1U",
+  },
   title: 'Vinayak Travels – Safe, Comfortable & Affordable Travel in Maharashtra',
   description:
     'Vinayak Travels offers premium tour packages, corporate transportation, vehicle rental and pilgrimage tours across Maharashtra. 10+ years of experience, 500+ happy customers, 4.2★ Google rating.',
