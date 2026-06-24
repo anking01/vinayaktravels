@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Poppins, Inter } from 'next/font/google'
 import './globals.css'
 import LayoutShell from '@/components/LayoutShell'
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   title: 'Vinayak Travels – Safe, Comfortable & Affordable Travel in Maharashtra',
   description:
-    'Vinayak Travels offers premium tour packages, corporate transportation, vehicle rental and pilgrimage tours across Maharashtra. 10+ years of experience, 500+ happy customers, 4.2★ Google rating.',
+    'Vinayak Travels offers Jyotirling pilgrimage tours across Maharashtra and Gujarat. 6 months, 1000+ happy travelers. GPS tracked vehicles, no hidden charges.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -33,6 +34,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <LayoutShell>{children}</LayoutShell>
         </Providers>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5VC453BTCX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5VC453BTCX');
+          `}
+        </Script>
       </body>
     </html>
   )
