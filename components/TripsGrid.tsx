@@ -23,6 +23,7 @@ type Trip = {
   included: string
   itinerary: string
   active: boolean
+  slug: string
 }
 
 function parse<T>(val: string, fallback: T): T {
@@ -73,7 +74,7 @@ export default function TripsGrid({ filter }: { filter?: string }) {
           <div
             key={trip.id}
             className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all cursor-pointer group"
-            onClick={() => setSelected(trip)}
+            onClick={() => window.location.href = "/packages/" + trip.slug}
           >
             {/* Image */}
             <div className="relative h-48 overflow-hidden bg-gray-100">
