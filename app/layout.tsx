@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   verification: {
     google: "tEzS2WwuiT7wBrJd_RlfnY7cCb3QKHV2DcNCF-gtJ1U",
   },
-  title: 'Vinayak Travels – Safe, Comfortable & Affordable Travel in Maharashtra',
+  title: 'Vinayak Travels | Jyotirling & Char Dham Tour Packages from Mumbai',
   description:
     'Vinayak Travels offers Jyotirling pilgrimage tours across Maharashtra and Gujarat. 6 months, 1000+ happy travelers. GPS tracked vehicles, no hidden charges.',
 }
