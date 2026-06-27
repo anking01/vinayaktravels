@@ -10,6 +10,7 @@ datasource db {
 model Trip {
   id         String   @id @default(cuid())
   title      String
+  slug       String   @default("")
   emoji      String   @default("🗺️")
   status     String   @default("UPCOMING")
   duration   String
